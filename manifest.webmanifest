@@ -1,0 +1,8 @@
+{
+  "name": "二模五科 AI 會考版",
+  "short_name": "二模AI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07090d",
+  "theme_color": "#07090d"
+}
