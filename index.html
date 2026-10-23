@@ -50,11 +50,10 @@ fetch("questions.json").then(r=>r.json()).then(d=>{bank=d;renderSubjects()});
 function renderSubjects(){
  const counts=bank.meta.counts;
  document.querySelector("#subjects").innerHTML=subjects.map(s=>`
- <button class="card" onclick="start('${s}')"><b>${s}</b><br><span class="muted">${typeof counts[s]==="number"?counts[s]+" 題會考式結構":"題庫待補"}</span></button>`).join("");
+ <button class="card" onclick="start('${s}')"><b>${s}</b><br><span class="muted">${typeof counts[s]==="number"?counts[s]+" 題會考式結構":"55 題原創補充"}</span></button>`).join("");
 }
 function start(s){
  subject=s;
- if(s==="社會"){alert("社會科 115P 檔案尚未出現在目前附件中，因此先保留入口，不用外部資料補題。");return}
  current=[...bank.questions[s]].sort(()=>Math.random()-.5);
  idx=0;answers=Array(current.length).fill(null);
  document.querySelector("#home").classList.add("hidden");document.querySelector("#result").classList.add("hidden");document.querySelector("#exam").classList.remove("hidden");render();
